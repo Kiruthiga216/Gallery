@@ -173,10 +173,6 @@ function filterImages() {
 
 ![alt text](<Screenshot 2025-04-30 141812.png>)
 
-
-![alt text](<Screenshot 2025-04-30 141823.png>)
-
-
 ![alt text](<Screenshot 2025-04-30 141834.png>)
 
 ![alt text](<Screenshot 2025-04-30 141845.png>)
