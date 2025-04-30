@@ -1,5 +1,7 @@
 # Ex.08 Design of Interactive Image Gallery
-# Date:
+# Name:Kiruthiga.B
+# Reg.no:212224040160
+# Date:30/04/2025
 # AIM:
 To design a web application for an inteactive image gallery with minimum five images.
 
@@ -23,6 +25,162 @@ Validate the HTML and CSS code.
 Publish the website in the given URL.
 
 # PROGRAM :
+```
+gallery.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Photo Gallery</title>
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+  <header>
+    <h1>INTERACTIVE IMAGE GALLERY</h1>
+  </header>
+  <main>
+    <section class="gallery">
+      <div class="photo-item" data-title="DRAGONFLY">
+        <img src="Screenshot 2025-04-30 135129.png" alt="DRAGONFLY">
+      </div>
+      <div class="photo-item" data-title="BUTTERFLY">
+        <img src="Screenshot 2025-04-30 135142.png" alt="BUTTERFLY">
+      </div>
+      <div class="photo-item" data-title="LADYBIRD">
+        <img src="Screenshot 2025-04-30 135200.png" alt="LADYBIRD">
+      </div>
+      <div class="photo-item" data-title="RED ANT">
+        <img src="Screenshot 2025-04-30 135228.png" alt="RED ANT">
+      </div>
+      <div class="photo-item" data-title="HONEYBEE">
+        <img src="Screenshot 2025-04-30 135253.png" alt="HONEYBEE">
+      </div>
+      <div class="photo-item" data-title="GRASSHOPPER">
+        <img src="Screenshot 2025-04-30 135514.png" alt="GRASSHOPPER">
+      </div>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Large View">
+  </div>
+ <script src="gallery.js"></script>
+ <footer style="text-align: center; padding: 10px; background-color: #0083ca; color: white; margin-top: 20px;">
+    <p>Designed and developed by Kiruthiga.B </p>
+</footer>
+
+</body>
+</html>
+
+gallery.css
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: aquamarine;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  main {
+    padding: 2rem;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 10rem;
+
+  }
+  
+  .photo-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .photo-item img:hover {
+    transform: scale(1.05);
+  }
+  
+  .lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+gallery.js
+
+
+const photoItems = document.querySelectorAll('.photo-item img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+photoItems.forEach(img => {
+  img.addEventListener('click', () => {
+    lightbox.style.display = 'flex';
+    lightboxImg.src = img.src;
+  });
+});
+
+function closeLightbox() {
+  lightbox.style.display = 'none';
+}
+
+function filterImages() {
+  const query = document.getElementById('search').value.toLowerCase();
+  const photoItems = document.querySelectorAll('.photo-item');
+  
+  photoItems.forEach(item => {
+    const title = item.getAttribute('data-title').toLowerCase();
+    if (title.includes(query)) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+```
 # OUTPUT:
+![alt text](<Screenshot 2025-04-30 141751.png>)
+
+![alt text](<Screenshot 2025-04-30 141803.png>)
+
+![alt text](<Screenshot 2025-04-30 141812.png>)
+
+![alt text](<Screenshot 2025-04-30 141823.png>)
+
+![alt text](<Screenshot 2025-04-30 141834.png>)
+
+![alt text](<Screenshot 2025-04-30 141845.png>)
+
+![alt text](<Screenshot 2025-04-30 141855.png>)
+
+
 # RESULT:
 The program for designing an interactive image gallery using HTML, CSS and JavaScript is executed successfully.

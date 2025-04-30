@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Photo Gallery</title>
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+  <header>
+    <h1>INTERACTIVE IMAGE GALLERY</h1>
+  </header>
+  <main>
+    <section class="gallery">
+      <div class="photo-item" data-title="DRAGONFLY">
+        <img src="Screenshot 2025-04-30 135129.png" alt="DRAGONFLY">
+      </div>
+      <div class="photo-item" data-title="BUTTERFLY">
+        <img src="Screenshot 2025-04-30 135142.png" alt="BUTTERFLY">
+      </div>
+      <div class="photo-item" data-title="LADYBIRD">
+        <img src="Screenshot 2025-04-30 135200.png" alt="LADYBIRD">
+      </div>
+      <div class="photo-item" data-title="RED ANT">
+        <img src="Screenshot 2025-04-30 135228.png" alt="RED ANT">
+      </div>
+      <div class="photo-item" data-title="HONEYBEE">
+        <img src="Screenshot 2025-04-30 135253.png" alt="HONEYBEE">
+      </div>
+      <div class="photo-item" data-title="GRASSHOPPER">
+        <img src="Screenshot 2025-04-30 135514.png" alt="GRASSHOPPER">
+      </div>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Large View">
+  </div>
+ <script src="gallery.js"></script>
+ <footer style="text-align: center; padding: 10px; background-color: #0083ca; color: white; margin-top: 20px;">
+    <p>Designed and developed by Kiruthiga.B </p>
+</footer>
+
+</body>
+</html>
